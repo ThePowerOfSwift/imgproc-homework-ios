@@ -145,25 +145,43 @@
     return self.labelHistory.hidden == NO;
 }
 
+
+
+void drawHistogram(CGContextRef ctx, int *pdf, CGRect rect, int max)
+{
+    
+    CGContextFillRect(ctx, rect);
+    for( int i = 0; i < 256; i++) {
+        CGFloat y = (pdf[i] * rect.size.height) / max;
+        y = (rect.origin.y + rect.size.height - y);
+        
+        CGContextMoveToPoint(ctx, rect.origin.x + i, rect.origin.y + rect.size.height);
+        CGContextAddLineToPoint(ctx, rect.origin.x + i, y);
+        CGContextStrokePath(ctx);
+    }
+}
+
 - (UIImage *) imageWithHistogram:(int *) histogram max:(NSUInteger) max min:(NSUInteger) min
 {
     UIImage *image = nil;
-    // 256x100, background: black, foreground white
-    CGSize size = CGSizeMake(256, 100);
+    CGSize size = CGSizeMake(512, 200);
     UIGraphicsBeginImageContext(size);
     CGContextRef ctx = UIGraphicsGetCurrentContext();
+    
+    // Histogram (PDF) Graph
     CGContextSetFillColorWithColor(ctx, [UIColor blackColor].CGColor);
     CGContextSetStrokeColorWithColor(ctx, [UIColor whiteColor].CGColor);
+    drawHistogram(ctx, histogram, CGRectMake(0, 0, size.width/2, size.height), max);
     
-    CGContextFillRect(ctx, CGRectMake(0, 0, size.width, size.height));
-    for( int i = 0; i < 256; i++) {
-        CGFloat y = (histogram[i] * 100.0) / max;
-        y = (size.height - y);
-        
-        CGContextMoveToPoint(ctx, i, size.height);
-        CGContextAddLineToPoint(ctx, i, y);
-        CGContextStrokePath(ctx);
+    // CDF: Cumulative Distribution Function Graph
+    int cdf[256];
+    cdf[0] = histogram[0];
+    for( int i = 1; i < 256; i++) {
+        cdf[i] = cdf[i-1] + histogram[i];
     }
+    CGContextSetFillColorWithColor(ctx, [UIColor blueColor].CGColor);
+    CGContextSetStrokeColorWithColor(ctx, [UIColor whiteColor].CGColor);
+    drawHistogram(ctx, cdf, CGRectMake(size.width/2, 0, size.width/2, size.height), cdf[255]);
     
     image = UIGraphicsGetImageFromCurrentImageContext();
     UIGraphicsEndImageContext();
@@ -189,14 +207,6 @@
     [self showHistory:YES];
     
     [self addImageHistory:image];
-}
-
-#pragma mark - Image Processing
-
-- (void) processGaussianBlur:(UIImage *) image done: (void(^)(UIImage *image)) done
-{
-    image = [ImageProcessing gaussianBlur:image];
-    done( image );
 }
 
 #pragma mark - Actions
@@ -304,19 +314,6 @@
     [[NSOperationQueue mainQueue] addOperationWithBlock:^{
         //
     switch (menuItem) {
-        case DIPMenuItemGaussianBlur:
-        {
-            self.activityIndicator.hidden = NO;
-            [self.activityIndicator startAnimating];
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [self processGaussianBlur:self.imageView.image done:^(UIImage *image) {
-                    [self setMainImage:image];
-                    [self.activityIndicator stopAnimating];
-                    self.activityIndicator.hidden = YES;
-                }];
-            });
-        }
-            break;
         case DIPMenuItemAutoContrast:
         {
             dispatch_async(dispatch_get_main_queue(), ^{

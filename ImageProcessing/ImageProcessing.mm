@@ -11,34 +11,21 @@
 @implementation ImageProcessing
 
 
-+ (UIImage *) regionDetectedImageWithUIImage:(UIImage *) image x:(int) x y:(int) y
-{
-    /*
-    ImageWrapper *region = [ImageWrapper regionDetectedImageWithUIImage:image x:x y:y];
-    ImageWrapper *edge = region.image->cannyEdgeExtract(0.3, 0.7);
-    
-    return edge.image->toUIImage();
-     */
-    return [ImageWrapper regionDetectedImageWithUIImage:image x:x y:y].image->toUIImage();
-}
-
-+ (UIImage *) extractEdgeWithUIImage:(UIImage *) image
++ (UIImage *) grayscale:(UIImage *) image
 {
     ImageWrapper *wrapper = [ImageWrapper imageWithUIImage:image];
-    return wrapper.image->gaussianBlur().image->cannyEdgeExtract(0.2, 0.6).image->toUIImage();
-}
-
-+ (UIImage *) gaussianBlur:(UIImage *)image
-{
-    ImageWrapper *wrapper = [ImageWrapper imageWithUIImage:image];
-    
-    for( int i = 0; i < 3; i++) {
-        wrapper = wrapper.image->gaussianBlur();
-    }
     return [wrapper UIImage];
-    
 }
 
+/* Histogram */
++ (void) measureImage:(UIImage *) image histogram:(int *) histogram
+{
+    ImageWrapper *wrapper = [ImageWrapper imageWithUIImage:image];
+    wrapper.image->measureHistogram(histogram);
+}
+
+
+/* Auto Contrast */
 + (UIImage *) histogramEqualization:(UIImage *) image
 {
     ImageWrapper *wrapper = [ImageWrapper imageWithUIImage:image];
@@ -49,12 +36,7 @@
     
 }
 
-+ (UIImage *) grayscale:(UIImage *) image
-{
-    ImageWrapper *wrapper = [ImageWrapper imageWithUIImage:image];
-    return [wrapper UIImage];
-}
-
+/* Auto Focus */
 + (NSUInteger) measureContrast:(UIImage *) image
 {
     unsigned int measure;
@@ -64,12 +46,6 @@
     
     measure = wrapper.image->measureContrast(0, 0, width, height);
     return measure;
-}
-
-+ (void) measureImage:(UIImage *) image histogram:(int *) histogram
-{
-    ImageWrapper *wrapper = [ImageWrapper imageWithUIImage:image];
-    wrapper.image->measureHistogram(histogram);
 }
 
 

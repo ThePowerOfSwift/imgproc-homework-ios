@@ -3,7 +3,10 @@
  *  ImageProcessing
  *
  *  Created by Chris Greening on 02/01/2009.
+ *  http://code.google.com/p/simple-iphone-image-processing/
  *
+ *  Modified by Simon Kim for narrower purpose
+ *  Sep. 23rd, 2013
  */
 
 #import <UIKit/UIImage.h>
@@ -12,7 +15,6 @@
 #include <algorithm>
 
 class Image;
-// objective C wrapper for our image class
 @interface ImageWrapper : NSObject {
 	Image *image;
 	bool ownsImage;
@@ -22,35 +24,11 @@ class Image;
 @property(assign, nonatomic) bool ownsImage;
 
 - (UIImage *) UIImage;
-- (ImageWrapper *) regionDetectedImageAtX:(int) x y:(int) y;
 
 + (ImageWrapper *) imageWithCPPImage:(Image *) theImage;
 + (ImageWrapper *) imageWithUIImage:(UIImage *) theImage;
 + (ImageWrapper *) imageWithUIImage:(UIImage *) theImage resize:(CGSize) size;
-// Input: UIImage, point of interest
-// Output: UIImage
-+ (ImageWrapper *) regionDetectedImageWithUIImage:(UIImage *) image x:(int) x y:(int) y;
 @end
-
-class ImagePoint {
-public:
-	short x,y;
-	inline ImagePoint(short xpos, short ypos) {
-		x=xpos;
-		y=ypos;
-	}
-	inline ImagePoint(int xpos, int ypos) {
-		x=xpos;
-		y=ypos;
-	}
-	inline ImagePoint(const ImagePoint &other) {
-		x=other.x;
-		y=other.y;
-	}
-	inline ImagePoint() {
-		x=0; y=0;
-	}
-};
 
 class Image {
 private:
@@ -73,41 +51,10 @@ public:
 	static ImageWrapper *createImage(uint8_t *imageData, int width, int height, bool ownsData=false);
 	// take a source UIImage and convert it to greyscale
 	static ImageWrapper *createImage(UIImage *srcImage, int width, int height, bool imageIsRotatedBy90degrees=false);
-	// edge detection
-	ImageWrapper *cannyEdgeExtract(float tlow, float thigh);
-	// local thresholding
-	ImageWrapper* autoLocalThreshold();
-	// threshold using integral
-	ImageWrapper *autoIntegratingThreshold();
-	// threshold an image automatically
-	ImageWrapper *autoThreshold();
-	// gaussian smooth the image
-	ImageWrapper *gaussianBlur();
-	// get the percent set pixels
-	int getPercentSet();
-	// exrtact a connected area from the image
-	void extractConnectedRegion(int x, int y, std::vector<ImagePoint> *points);
-    void extractConnectedRegion2(int x, int y, std::vector<ImagePoint> *points);
-    
-	// find the largest connected region in the image
-	void findLargestStructure(std::vector<ImagePoint> *maxPoints);
-
-    // simon
-    ImageWrapper *connectedRegion(int x, int y, std::vector<ImagePoint> *ppoints);
-    ImageWrapper *mono();
-
-    
-	// normalise an image
-	void normalise();
-	// rotate by 90, 180, 270, 360
-	ImageWrapper *rotate(int angle);
-	// shrink to a new size
-	ImageWrapper *resize(int newX, int newY);
-	ImageWrapper *shrinkBy2();
+  
 	// histogram equalisation
 	void HistogramEqualisation();
-	// skeltonize
-	void skeletonise();
+
 	// convert back to a UIImage for display
 	UIImage *toUIImage();
 	~Image() {
@@ -128,16 +75,3 @@ public:
     // histogram[256]
     void measureHistogram(int *histogram);
 };
-
-inline bool sortByX1(const ImagePoint &p1, const ImagePoint &p2) {
-	if(p1.x==p2.x) return p1.y<p2.y;
-	return p1.x<p2.x;
-}
-
-inline bool sortByY1(const ImagePoint &p1, const ImagePoint &p2) {
-	if(p1.y==p2.y) return p1.x<p2.x;
-	return p1.y<p2.y;
-}
-
-void sortImagePoints(std::vector<ImagePoint> &points);
-

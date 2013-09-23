@@ -11,7 +11,6 @@
 typedef enum {
     DIPMenuItemAutoContrast = 0,
     DIPMenuItemFocusMeasure,
-    DIPMenuItemGaussianBlur,
 } DIPMenuItem;
 
 @class DIPMenuViewController;
