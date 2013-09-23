@@ -21,6 +21,13 @@
 		F44BAE9117DED401001A09E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44BAE7317DED401001A09E5 /* UIKit.framework */; };
 		F44BAE9917DED401001A09E5 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = F44BAE9717DED401001A09E5 /* InfoPlist.strings */; };
 		F44BAE9B17DED401001A09E5 /* ImageProcessingTests.m in Sources */ = {isa = PBXBuildFile; fileRef = F44BAE9A17DED401001A09E5 /* ImageProcessingTests.m */; };
+		F44BAEE817DED431001A09E5 /* DZUILib.bundle in Resources */ = {isa = PBXBuildFile; fileRef = F44BAEC117DED431001A09E5 /* DZUILib.bundle */; };
+		F44BAEE917DED431001A09E5 /* libDZUILib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = F44BAEDF17DED431001A09E5 /* libDZUILib.a */; };
+		F44BAEF017DED697001A09E5 /* photos.png in Resources */ = {isa = PBXBuildFile; fileRef = F44BAEEF17DED697001A09E5 /* photos.png */; };
+		F44BAEF217DED6EE001A09E5 /* MobileCoreServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44BAEF117DED6EE001A09E5 /* MobileCoreServices.framework */; };
+		F44BAEF517DED865001A09E5 /* Image.mm in Sources */ = {isa = PBXBuildFile; fileRef = F44BAEF417DED865001A09E5 /* Image.mm */; };
+		F44BAEF817DED902001A09E5 /* DIPMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = F44BAEF717DED902001A09E5 /* DIPMenuViewController.m */; };
+		F44BAEFB17DEDDD5001A09E5 /* ImageProcessing.mm in Sources */ = {isa = PBXBuildFile; fileRef = F44BAEFA17DEDDD5001A09E5 /* ImageProcessing.mm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +60,80 @@
 		F44BAE9617DED401001A09E5 /* ImageProcessingTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ImageProcessingTests-Info.plist"; sourceTree = "<group>"; };
 		F44BAE9817DED401001A09E5 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		F44BAE9A17DED401001A09E5 /* ImageProcessingTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ImageProcessingTests.m; sourceTree = "<group>"; };
+		F44BAEA617DED430001A09E5 /* Base64Encoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Base64Encoder.h; sourceTree = "<group>"; };
+		F44BAEA717DED430001A09E5 /* CALevelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CALevelMeter.h; sourceTree = "<group>"; };
+		F44BAEA817DED430001A09E5 /* DisplayCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DisplayCell.h; sourceTree = "<group>"; };
+		F44BAEA917DED430001A09E5 /* DZAVAudioPlayRecordController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZAVAudioPlayRecordController.h; sourceTree = "<group>"; };
+		F44BAEAA17DED430001A09E5 /* DZDictionaryUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZDictionaryUtility.h; sourceTree = "<group>"; };
+		F44BAEAB17DED430001A09E5 /* DZIOFileUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZIOFileUtility.h; sourceTree = "<group>"; };
+		F44BAEAC17DED430001A09E5 /* DZIOURLDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZIOURLDownloader.h; sourceTree = "<group>"; };
+		F44BAEAD17DED430001A09E5 /* DZQPFileListManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZQPFileListManager.h; sourceTree = "<group>"; };
+		F44BAEAE17DED430001A09E5 /* DZSettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZSettingsViewController.h; sourceTree = "<group>"; };
+		F44BAEAF17DED430001A09E5 /* DZSimpleTableViewDataSource.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZSimpleTableViewDataSource.h; sourceTree = "<group>"; };
+		F44BAEB017DED430001A09E5 /* DZTrace.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZTrace.h; sourceTree = "<group>"; };
+		F44BAEB117DED430001A09E5 /* DZTwitterClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZTwitterClient.h; sourceTree = "<group>"; };
+		F44BAEB217DED430001A09E5 /* DZUIActionSheetUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUIActionSheetUtility.h; sourceTree = "<group>"; };
+		F44BAEB317DED430001A09E5 /* DZUIActivityIndicatorUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUIActivityIndicatorUtility.h; sourceTree = "<group>"; };
+		F44BAEB417DED430001A09E5 /* DZUIAlertUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUIAlertUtility.h; sourceTree = "<group>"; };
+		F44BAEB517DED431001A09E5 /* DZUIAnimationUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUIAnimationUtility.h; sourceTree = "<group>"; };
+		F44BAEB617DED431001A09E5 /* DZUIButtonBarView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUIButtonBarView.h; sourceTree = "<group>"; };
+		F44BAEB717DED431001A09E5 /* DZUIDoubleZoomScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUIDoubleZoomScrollView.h; sourceTree = "<group>"; };
+		F44BAEB817DED431001A09E5 /* DZUIFeedViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUIFeedViewController.h; sourceTree = "<group>"; };
+		F44BAEB917DED431001A09E5 /* DZUIIconGridCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUIIconGridCell.h; sourceTree = "<group>"; };
+		F44BAEBA17DED431001A09E5 /* DZUIIconGridViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUIIconGridViewController.h; sourceTree = "<group>"; };
+		F44BAEBB17DED431001A09E5 /* DZUIImageDownloader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUIImageDownloader.h; sourceTree = "<group>"; };
+		F44BAEBC17DED431001A09E5 /* DZUIImageLibraryPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUIImageLibraryPicker.h; sourceTree = "<group>"; };
+		F44BAEBD17DED431001A09E5 /* DZUIImagePickerUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUIImagePickerUtility.h; sourceTree = "<group>"; };
+		F44BAEBE17DED431001A09E5 /* DZUIImageViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUIImageViewController.h; sourceTree = "<group>"; };
+		F44BAEBF17DED431001A09E5 /* DZUILabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUILabel.h; sourceTree = "<group>"; };
+		F44BAEC017DED431001A09E5 /* DZUILayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUILayer.h; sourceTree = "<group>"; };
+		F44BAEC117DED431001A09E5 /* DZUILib.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = DZUILib.bundle; sourceTree = "<group>"; };
+		F44BAEC217DED431001A09E5 /* DZUILib.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUILib.h; sourceTree = "<group>"; };
+		F44BAEC317DED431001A09E5 /* DZUISeamlessModalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUISeamlessModalViewController.h; sourceTree = "<group>"; };
+		F44BAEC417DED431001A09E5 /* DZUITextAlignment.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUITextAlignment.h; sourceTree = "<group>"; };
+		F44BAEC517DED431001A09E5 /* DZUITextEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUITextEntryViewController.h; sourceTree = "<group>"; };
+		F44BAEC617DED431001A09E5 /* DZUIThumbnailViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUIThumbnailViewCell.h; sourceTree = "<group>"; };
+		F44BAEC717DED431001A09E5 /* DZUIURLEntryCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUIURLEntryCell.h; sourceTree = "<group>"; };
+		F44BAEC817DED431001A09E5 /* DZUIViewControllerDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUIViewControllerDelegate.h; sourceTree = "<group>"; };
+		F44BAEC917DED431001A09E5 /* DZUIViewEffectAttributes.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUIViewEffectAttributes.h; sourceTree = "<group>"; };
+		F44BAECA17DED431001A09E5 /* DZUIViewSelector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUIViewSelector.h; sourceTree = "<group>"; };
+		F44BAECB17DED431001A09E5 /* DZUIViewSelector_v1.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUIViewSelector_v1.h; sourceTree = "<group>"; };
+		F44BAECC17DED431001A09E5 /* DZUIWebViewUtility.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZUIWebViewUtility.h; sourceTree = "<group>"; };
+		F44BAECD17DED431001A09E5 /* DZWebFeedItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZWebFeedItem.h; sourceTree = "<group>"; };
+		F44BAECE17DED431001A09E5 /* DZWebFeedParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZWebFeedParser.h; sourceTree = "<group>"; };
+		F44BAECF17DED431001A09E5 /* DZWebHTTPPostService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZWebHTTPPostService.h; sourceTree = "<group>"; };
+		F44BAED017DED431001A09E5 /* DZWebHTTPPostServiceLocalFileDescription.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZWebHTTPPostServiceLocalFileDescription.h; sourceTree = "<group>"; };
+		F44BAED117DED431001A09E5 /* DZWebObjectStoreAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZWebObjectStoreAPI.h; sourceTree = "<group>"; };
+		F44BAED217DED431001A09E5 /* DZWebPostItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZWebPostItem.h; sourceTree = "<group>"; };
+		F44BAED317DED431001A09E5 /* DZWebRichNoteAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZWebRichNoteAPI.h; sourceTree = "<group>"; };
+		F44BAED417DED431001A09E5 /* DZWebServiceAccessCredential.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZWebServiceAccessCredential.h; sourceTree = "<group>"; };
+		F44BAED517DED431001A09E5 /* DZWebServiceAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZWebServiceAPI.h; sourceTree = "<group>"; };
+		F44BAED617DED431001A09E5 /* DZWebServiceAPIFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZWebServiceAPIFactory.h; sourceTree = "<group>"; };
+		F44BAED717DED431001A09E5 /* DZWebServiceStyleSheetTemplate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZWebServiceStyleSheetTemplate.h; sourceTree = "<group>"; };
+		F44BAED817DED431001A09E5 /* DZWebWordPressAPI+Async.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "DZWebWordPressAPI+Async.h"; sourceTree = "<group>"; };
+		F44BAED917DED431001A09E5 /* DZWebWordPressAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DZWebWordPressAPI.h; sourceTree = "<group>"; };
+		F44BAEDA17DED431001A09E5 /* EntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EntryViewController.h; sourceTree = "<group>"; };
+		F44BAEDB17DED431001A09E5 /* GLLevelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GLLevelMeter.h; sourceTree = "<group>"; };
+		F44BAEDC17DED431001A09E5 /* ImageManipulator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageManipulator.h; sourceTree = "<group>"; };
+		F44BAEDD17DED431001A09E5 /* ImageUtil.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageUtil.h; sourceTree = "<group>"; };
+		F44BAEDE17DED431001A09E5 /* LevelMeter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LevelMeter.h; sourceTree = "<group>"; };
+		F44BAEDF17DED431001A09E5 /* libDZUILib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libDZUILib.a; sourceTree = "<group>"; };
+		F44BAEE017DED431001A09E5 /* MeterTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MeterTable.h; sourceTree = "<group>"; };
+		F44BAEE117DED431001A09E5 /* PointRotator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PointRotator.h; sourceTree = "<group>"; };
+		F44BAEE217DED431001A09E5 /* XMLEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLEncoder.h; sourceTree = "<group>"; };
+		F44BAEE317DED431001A09E5 /* XMLRPCElement.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCElement.h; sourceTree = "<group>"; };
+		F44BAEE417DED431001A09E5 /* XMLRPCEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCEncoder.h; sourceTree = "<group>"; };
+		F44BAEE517DED431001A09E5 /* XMLRPCResponseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLRPCResponseParser.h; sourceTree = "<group>"; };
+		F44BAEE617DED431001A09E5 /* XMLSOAPEncoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLSOAPEncoder.h; sourceTree = "<group>"; };
+		F44BAEE717DED431001A09E5 /* XMLSOAPResponseParser.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMLSOAPResponseParser.h; sourceTree = "<group>"; };
+		F44BAEEF17DED697001A09E5 /* photos.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = photos.png; sourceTree = "<group>"; };
+		F44BAEF117DED6EE001A09E5 /* MobileCoreServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MobileCoreServices.framework; path = System/Library/Frameworks/MobileCoreServices.framework; sourceTree = SDKROOT; };
+		F44BAEF317DED865001A09E5 /* Image.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Image.h; sourceTree = "<group>"; };
+		F44BAEF417DED865001A09E5 /* Image.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = Image.mm; sourceTree = "<group>"; };
+		F44BAEF617DED902001A09E5 /* DIPMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIPMenuViewController.h; sourceTree = "<group>"; };
+		F44BAEF717DED902001A09E5 /* DIPMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIPMenuViewController.m; sourceTree = "<group>"; };
+		F44BAEF917DEDDD5001A09E5 /* ImageProcessing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ImageProcessing.h; sourceTree = "<group>"; };
+		F44BAEFA17DEDDD5001A09E5 /* ImageProcessing.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = ImageProcessing.mm; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +141,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F44BAEF217DED6EE001A09E5 /* MobileCoreServices.framework in Frameworks */,
 				F44BAE7217DED401001A09E5 /* CoreGraphics.framework in Frameworks */,
+				F44BAEE917DED431001A09E5 /* libDZUILib.a in Frameworks */,
 				F44BAE7417DED401001A09E5 /* UIKit.framework in Frameworks */,
 				F44BAE7017DED401001A09E5 /* Foundation.framework in Frameworks */,
 			);
@@ -82,6 +165,8 @@
 		F44BAE6317DED401001A09E5 = {
 			isa = PBXGroup;
 			children = (
+				F44BAEEA17DED64D001A09E5 /* images */,
+				F44BAEA417DED430001A09E5 /* libs */,
 				F44BAE7517DED401001A09E5 /* ImageProcessing */,
 				F44BAE9417DED401001A09E5 /* ImageProcessingTests */,
 				F44BAE6E17DED401001A09E5 /* Frameworks */,
@@ -101,6 +186,7 @@
 		F44BAE6E17DED401001A09E5 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				F44BAEF117DED6EE001A09E5 /* MobileCoreServices.framework */,
 				F44BAE6F17DED401001A09E5 /* Foundation.framework */,
 				F44BAE7117DED401001A09E5 /* CoreGraphics.framework */,
 				F44BAE7317DED401001A09E5 /* UIKit.framework */,
@@ -112,6 +198,10 @@
 		F44BAE7517DED401001A09E5 /* ImageProcessing */ = {
 			isa = PBXGroup;
 			children = (
+				F44BAEF917DEDDD5001A09E5 /* ImageProcessing.h */,
+				F44BAEFA17DEDDD5001A09E5 /* ImageProcessing.mm */,
+				F44BAEF317DED865001A09E5 /* Image.h */,
+				F44BAEF417DED865001A09E5 /* Image.mm */,
 				F44BAE7E17DED401001A09E5 /* DIPAppDelegate.h */,
 				F44BAE7F17DED401001A09E5 /* DIPAppDelegate.m */,
 				F44BAE8117DED401001A09E5 /* Main.storyboard */,
@@ -119,6 +209,8 @@
 				F44BAE8517DED401001A09E5 /* DIPViewController.m */,
 				F44BAE8717DED401001A09E5 /* Images.xcassets */,
 				F44BAE7617DED401001A09E5 /* Supporting Files */,
+				F44BAEF617DED902001A09E5 /* DIPMenuViewController.h */,
+				F44BAEF717DED902001A09E5 /* DIPMenuViewController.m */,
 			);
 			path = ImageProcessing;
 			sourceTree = "<group>";
@@ -150,6 +242,95 @@
 				F44BAE9717DED401001A09E5 /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		F44BAEA417DED430001A09E5 /* libs */ = {
+			isa = PBXGroup;
+			children = (
+				F44BAEA517DED430001A09E5 /* DZUILib */,
+			);
+			path = libs;
+			sourceTree = "<group>";
+		};
+		F44BAEA517DED430001A09E5 /* DZUILib */ = {
+			isa = PBXGroup;
+			children = (
+				F44BAEA617DED430001A09E5 /* Base64Encoder.h */,
+				F44BAEA717DED430001A09E5 /* CALevelMeter.h */,
+				F44BAEA817DED430001A09E5 /* DisplayCell.h */,
+				F44BAEA917DED430001A09E5 /* DZAVAudioPlayRecordController.h */,
+				F44BAEAA17DED430001A09E5 /* DZDictionaryUtility.h */,
+				F44BAEAB17DED430001A09E5 /* DZIOFileUtility.h */,
+				F44BAEAC17DED430001A09E5 /* DZIOURLDownloader.h */,
+				F44BAEAD17DED430001A09E5 /* DZQPFileListManager.h */,
+				F44BAEAE17DED430001A09E5 /* DZSettingsViewController.h */,
+				F44BAEAF17DED430001A09E5 /* DZSimpleTableViewDataSource.h */,
+				F44BAEB017DED430001A09E5 /* DZTrace.h */,
+				F44BAEB117DED430001A09E5 /* DZTwitterClient.h */,
+				F44BAEB217DED430001A09E5 /* DZUIActionSheetUtility.h */,
+				F44BAEB317DED430001A09E5 /* DZUIActivityIndicatorUtility.h */,
+				F44BAEB417DED430001A09E5 /* DZUIAlertUtility.h */,
+				F44BAEB517DED431001A09E5 /* DZUIAnimationUtility.h */,
+				F44BAEB617DED431001A09E5 /* DZUIButtonBarView.h */,
+				F44BAEB717DED431001A09E5 /* DZUIDoubleZoomScrollView.h */,
+				F44BAEB817DED431001A09E5 /* DZUIFeedViewController.h */,
+				F44BAEB917DED431001A09E5 /* DZUIIconGridCell.h */,
+				F44BAEBA17DED431001A09E5 /* DZUIIconGridViewController.h */,
+				F44BAEBB17DED431001A09E5 /* DZUIImageDownloader.h */,
+				F44BAEBC17DED431001A09E5 /* DZUIImageLibraryPicker.h */,
+				F44BAEBD17DED431001A09E5 /* DZUIImagePickerUtility.h */,
+				F44BAEBE17DED431001A09E5 /* DZUIImageViewController.h */,
+				F44BAEBF17DED431001A09E5 /* DZUILabel.h */,
+				F44BAEC017DED431001A09E5 /* DZUILayer.h */,
+				F44BAEC117DED431001A09E5 /* DZUILib.bundle */,
+				F44BAEC217DED431001A09E5 /* DZUILib.h */,
+				F44BAEC317DED431001A09E5 /* DZUISeamlessModalViewController.h */,
+				F44BAEC417DED431001A09E5 /* DZUITextAlignment.h */,
+				F44BAEC517DED431001A09E5 /* DZUITextEntryViewController.h */,
+				F44BAEC617DED431001A09E5 /* DZUIThumbnailViewCell.h */,
+				F44BAEC717DED431001A09E5 /* DZUIURLEntryCell.h */,
+				F44BAEC817DED431001A09E5 /* DZUIViewControllerDelegate.h */,
+				F44BAEC917DED431001A09E5 /* DZUIViewEffectAttributes.h */,
+				F44BAECA17DED431001A09E5 /* DZUIViewSelector.h */,
+				F44BAECB17DED431001A09E5 /* DZUIViewSelector_v1.h */,
+				F44BAECC17DED431001A09E5 /* DZUIWebViewUtility.h */,
+				F44BAECD17DED431001A09E5 /* DZWebFeedItem.h */,
+				F44BAECE17DED431001A09E5 /* DZWebFeedParser.h */,
+				F44BAECF17DED431001A09E5 /* DZWebHTTPPostService.h */,
+				F44BAED017DED431001A09E5 /* DZWebHTTPPostServiceLocalFileDescription.h */,
+				F44BAED117DED431001A09E5 /* DZWebObjectStoreAPI.h */,
+				F44BAED217DED431001A09E5 /* DZWebPostItem.h */,
+				F44BAED317DED431001A09E5 /* DZWebRichNoteAPI.h */,
+				F44BAED417DED431001A09E5 /* DZWebServiceAccessCredential.h */,
+				F44BAED517DED431001A09E5 /* DZWebServiceAPI.h */,
+				F44BAED617DED431001A09E5 /* DZWebServiceAPIFactory.h */,
+				F44BAED717DED431001A09E5 /* DZWebServiceStyleSheetTemplate.h */,
+				F44BAED817DED431001A09E5 /* DZWebWordPressAPI+Async.h */,
+				F44BAED917DED431001A09E5 /* DZWebWordPressAPI.h */,
+				F44BAEDA17DED431001A09E5 /* EntryViewController.h */,
+				F44BAEDB17DED431001A09E5 /* GLLevelMeter.h */,
+				F44BAEDC17DED431001A09E5 /* ImageManipulator.h */,
+				F44BAEDD17DED431001A09E5 /* ImageUtil.h */,
+				F44BAEDE17DED431001A09E5 /* LevelMeter.h */,
+				F44BAEDF17DED431001A09E5 /* libDZUILib.a */,
+				F44BAEE017DED431001A09E5 /* MeterTable.h */,
+				F44BAEE117DED431001A09E5 /* PointRotator.h */,
+				F44BAEE217DED431001A09E5 /* XMLEncoder.h */,
+				F44BAEE317DED431001A09E5 /* XMLRPCElement.h */,
+				F44BAEE417DED431001A09E5 /* XMLRPCEncoder.h */,
+				F44BAEE517DED431001A09E5 /* XMLRPCResponseParser.h */,
+				F44BAEE617DED431001A09E5 /* XMLSOAPEncoder.h */,
+				F44BAEE717DED431001A09E5 /* XMLSOAPResponseParser.h */,
+			);
+			path = DZUILib;
+			sourceTree = "<group>";
+		};
+		F44BAEEA17DED64D001A09E5 /* images */ = {
+			isa = PBXGroup;
+			children = (
+				F44BAEEF17DED697001A09E5 /* photos.png */,
+			);
+			path = images;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -200,6 +381,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = DZPub.com;
 				TargetAttributes = {
+					F44BAE6B17DED401001A09E5 = {
+						DevelopmentTeam = 96XDWZP59T;
+					};
 					F44BAE8C17DED401001A09E5 = {
 						TestTargetID = F44BAE6B17DED401001A09E5;
 					};
@@ -229,7 +413,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F44BAEF017DED697001A09E5 /* photos.png in Resources */,
 				F44BAE8817DED401001A09E5 /* Images.xcassets in Resources */,
+				F44BAEE817DED431001A09E5 /* DZUILib.bundle in Resources */,
 				F44BAE7A17DED401001A09E5 /* InfoPlist.strings in Resources */,
 				F44BAE8317DED401001A09E5 /* Main.storyboard in Resources */,
 			);
@@ -250,9 +436,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F44BAEFB17DEDDD5001A09E5 /* ImageProcessing.mm in Sources */,
+				F44BAEF817DED902001A09E5 /* DIPMenuViewController.m in Sources */,
 				F44BAE8017DED401001A09E5 /* DIPAppDelegate.m in Sources */,
 				F44BAE7C17DED401001A09E5 /* main.m in Sources */,
 				F44BAE8617DED401001A09E5 /* DIPViewController.m in Sources */,
+				F44BAEF517DED865001A09E5 /* Image.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -355,7 +544,7 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution: Sangmo Kim";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -365,6 +554,7 @@
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				"PROVISIONING_PROFILE[sdk=iphoneos*]" = "82EBD023-DEA7-4983-8325-0901AC976253";
 				SDKROOT = iphoneos;
 				VALIDATE_PRODUCT = YES;
 			};
@@ -375,10 +565,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageProcessing/ImageProcessing-Prefix.pch";
 				INFOPLIST_FILE = "ImageProcessing/ImageProcessing-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/simon/Documents/Projects/KESL/Course/2013-02-DIP/iOS/ImageProcessing/libs/DZUILib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -388,10 +586,18 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageProcessing/ImageProcessing-Prefix.pch";
 				INFOPLIST_FILE = "ImageProcessing/ImageProcessing-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"/Users/simon/Documents/Projects/KESL/Course/2013-02-DIP/iOS/ImageProcessing/libs/DZUILib",
+				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -455,6 +661,7 @@
 				F44BAEA017DED401001A09E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		F44BAEA117DED401001A09E5 /* Build configuration list for PBXNativeTarget "ImageProcessingTests" */ = {
 			isa = XCConfigurationList;
@@ -463,6 +670,7 @@
 				F44BAEA317DED401001A09E5 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
