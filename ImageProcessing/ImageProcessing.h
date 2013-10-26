@@ -14,4 +14,5 @@
 + (UIImage *) histogramEqualization:(UIImage *) image;
 + (NSUInteger) measureContrast:(UIImage *) image;
 + (void) measureImage:(UIImage *) image histogram:(int *) histogram;
++ (UIImage *) transformImage:(UIImage *) image srcPoints:(CGPoint[4]) srcPoints tgtPoints:(CGPoint[4]) tgtPoints;
 @end

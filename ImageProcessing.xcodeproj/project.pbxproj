@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F41A49A81817865F008A77EC /* ball.png in Resources */ = {isa = PBXBuildFile; fileRef = F41A49A61817865F008A77EC /* ball.png */; };
+		F41A49A91817865F008A77EC /* ball@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = F41A49A71817865F008A77EC /* ball@2x.png */; };
+		F41A49AF1817871E008A77EC /* DIPTiePointsView.m in Sources */ = {isa = PBXBuildFile; fileRef = F41A49AE1817871E008A77EC /* DIPTiePointsView.m */; };
 		F44BAE7017DED401001A09E5 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44BAE6F17DED401001A09E5 /* Foundation.framework */; };
 		F44BAE7217DED401001A09E5 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44BAE7117DED401001A09E5 /* CoreGraphics.framework */; };
 		F44BAE7417DED401001A09E5 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = F44BAE7317DED401001A09E5 /* UIKit.framework */; };
@@ -41,6 +44,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		F41A49A61817865F008A77EC /* ball.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = ball.png; sourceTree = "<group>"; };
+		F41A49A71817865F008A77EC /* ball@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "ball@2x.png"; sourceTree = "<group>"; };
+		F41A49AD1817871E008A77EC /* DIPTiePointsView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DIPTiePointsView.h; sourceTree = "<group>"; };
+		F41A49AE1817871E008A77EC /* DIPTiePointsView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DIPTiePointsView.m; sourceTree = "<group>"; };
 		F44BAE6C17DED401001A09E5 /* ImageProcessing.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ImageProcessing.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F44BAE6F17DED401001A09E5 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		F44BAE7117DED401001A09E5 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -211,6 +218,8 @@
 				F44BAE7617DED401001A09E5 /* Supporting Files */,
 				F44BAEF617DED902001A09E5 /* DIPMenuViewController.h */,
 				F44BAEF717DED902001A09E5 /* DIPMenuViewController.m */,
+				F41A49AD1817871E008A77EC /* DIPTiePointsView.h */,
+				F41A49AE1817871E008A77EC /* DIPTiePointsView.m */,
 			);
 			path = ImageProcessing;
 			sourceTree = "<group>";
@@ -328,6 +337,8 @@
 		F44BAEEA17DED64D001A09E5 /* images */ = {
 			isa = PBXGroup;
 			children = (
+				F41A49A61817865F008A77EC /* ball.png */,
+				F41A49A71817865F008A77EC /* ball@2x.png */,
 				F44BAEEF17DED697001A09E5 /* photos.png */,
 			);
 			path = images;
@@ -415,8 +426,10 @@
 			files = (
 				F44BAEF017DED697001A09E5 /* photos.png in Resources */,
 				F44BAE8817DED401001A09E5 /* Images.xcassets in Resources */,
+				F41A49A91817865F008A77EC /* ball@2x.png in Resources */,
 				F44BAEE817DED431001A09E5 /* DZUILib.bundle in Resources */,
 				F44BAE7A17DED401001A09E5 /* InfoPlist.strings in Resources */,
+				F41A49A81817865F008A77EC /* ball.png in Resources */,
 				F44BAE8317DED401001A09E5 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -438,6 +451,7 @@
 			files = (
 				F44BAEFB17DEDDD5001A09E5 /* ImageProcessing.mm in Sources */,
 				F44BAEF817DED902001A09E5 /* DIPMenuViewController.m in Sources */,
+				F41A49AF1817871E008A77EC /* DIPTiePointsView.m in Sources */,
 				F44BAE8017DED401001A09E5 /* DIPAppDelegate.m in Sources */,
 				F44BAE7C17DED401001A09E5 /* main.m in Sources */,
 				F44BAE8617DED401001A09E5 /* DIPViewController.m in Sources */,
@@ -507,7 +521,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -544,7 +559,8 @@
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				COPY_PHASE_STRIP = YES;
 				ENABLE_NS_ASSERTIONS = NO;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
@@ -565,8 +581,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageProcessing/ImageProcessing-Prefix.pch";
 				INFOPLIST_FILE = "ImageProcessing/ImageProcessing-Info.plist";
@@ -586,8 +602,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "ImageProcessing/ImageProcessing-Prefix.pch";
 				INFOPLIST_FILE = "ImageProcessing/ImageProcessing-Info.plist";

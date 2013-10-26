@@ -74,4 +74,10 @@ public:
     unsigned int measureContrast(int x, int y, int width, int height);
     // histogram[256]
     void measureHistogram(int *histogram);
+    inline void setPixel(uint8_t pixel, int x, int y) {
+        m_imageData[y * m_width + x] = pixel;
+    }
+    inline uint8_t getPixel(int x, int y) {
+        return m_imageData[y * m_width + x];
+    }
 };

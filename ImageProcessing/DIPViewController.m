@@ -12,10 +12,11 @@
 #import "DIPMenuViewController.h"
 #import "ImageProcessing.h"
 #import <CommonCrypto/CommonDigest.h>
-
+#import "DIPTiePointsView.h"
 
 @interface DIPViewController () <DIPMenuViewControllerDelegate>
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
+@property (weak, nonatomic) IBOutlet DIPTiePointsView *tiePointsView;
 @property (weak, nonatomic) IBOutlet UIActivityIndicatorView *activityIndicator;
 @property (weak, nonatomic) IBOutlet UILabel *labelContrast;
 @property (weak, nonatomic) IBOutlet UIImageView *imageViewHistogram;
@@ -51,6 +52,12 @@
     swipeRec = [[UISwipeGestureRecognizer alloc] initWithTarget:self action:@selector(gestureSwipe:)];
     swipeRec.direction = UISwipeGestureRecognizerDirectionRight;
     [self.imageView addGestureRecognizer:swipeRec];
+    
+    [self.tiePointsView removeFromSuperview];
+    [self.imageView addSubview:self.tiePointsView];
+    self.tiePointsView.center = CGPointMake(CGRectGetMidX(self.imageView.bounds), CGRectGetMidY(self.imageView.bounds));
+    CGRect bounds = self.imageView.bounds;
+    self.tiePointsView.bounds = bounds;
 
 }
 
@@ -223,7 +230,8 @@ void drawHistogram(CGContextRef ctx, int *pdf, CGRect rect, int max)
         } imagePickedBlock:^(UIImage *image) {
             //
             [self dismissViewControllerAnimated:YES completion:^{
-                [self setMainImage:[ImageProcessing grayscale:image]];
+                //[self setMainImage:[ImageProcessing grayscale:image]];
+                [self setMainImage:image];
             }];
         } cancelledBlock:^{
             [self dismissViewControllerAnimated:YES
@@ -246,9 +254,8 @@ void drawHistogram(CGContextRef ctx, int *pdf, CGRect rect, int max)
         } imagePickedBlock:^(UIImage *image) {
             //
             [self dismissViewControllerAnimated:YES completion:^{
-                NSLog(@"self.view:%@", NSStringFromCGRect(self.view.frame));
-                NSLog(@"self.imageView:%@", NSStringFromCGRect(self.imageView.frame));
-                [self setMainImage:[ImageProcessing grayscale:image]];
+                //[self setMainImage:[ImageProcessing grayscale:image]];
+                [self setMainImage:image];
             }];
         } cancelledBlock:^{
             [self dismissViewControllerAnimated:YES
@@ -305,7 +312,33 @@ void drawHistogram(CGContextRef ctx, int *pdf, CGRect rect, int max)
         }];
     }
 }
-
+- (void) testTransformWithPoints:(NSArray *) points
+{
+    NSLog(@"tie points:%@", points);
+    if ( points.count == 4 ) {
+        CGPoint targetPoints[4];
+        CGPoint sourcePoints[4];
+        
+        CGSize size = self.imageView.image.size;
+        size.width = 400;
+        size.height = 300;
+        
+        targetPoints[0] = CGPointMake(0, 0);
+        targetPoints[1] = CGPointMake(size.width, 0);
+        targetPoints[2] = CGPointMake(0, size.height);
+        targetPoints[3] = CGPointMake(size.width, size.height);
+        
+        sourcePoints[0] = [points[0] CGPointValue];
+        sourcePoints[1] = [points[1] CGPointValue];
+        sourcePoints[2] = [points[2] CGPointValue];
+        sourcePoints[3] = [points[3] CGPointValue];
+        
+        UIImage *transformed = [ImageProcessing transformImage:self.imageView.image srcPoints:sourcePoints tgtPoints:targetPoints];
+        [self setMainImage:transformed];
+    }
+    
+    
+}
 #pragma mark - DIPMenuViewControllerDelegate
 - (void) dipMenu:(DIPMenuViewController *) menu didSelect:(DIPMenuItem) menuItem
 {
@@ -331,6 +364,14 @@ void drawHistogram(CGContextRef ctx, int *pdf, CGRect rect, int max)
                 [self doAutoFocus];
             } else {
                 [DZUIAlertUtility alertWithMessage:@"Load more 2 or more images" title:@"Information"];
+            }
+            break;
+        }
+        case DIPMenuItemTransform:
+        {
+            if ( self.imageView.image ) {
+                NSArray *points = [self.tiePointsView tiePointsScaleBySize:self.imageView.image.size];
+                [self testTransformWithPoints:points];
             }
             break;
         }
